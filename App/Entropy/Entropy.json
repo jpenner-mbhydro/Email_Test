@@ -1,0 +1,91 @@
+{
+  "ComponentIndexes": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Button1": 22,
+    "Button2": 23,
+    "Label1": 4,
+    "Label2": 7,
+    "Label3": 9,
+    "Label4": 11,
+    "Label5": 13,
+    "Label6": 16,
+    "Label7": 17,
+    "Label8": 20,
+    "scrMain": 3,
+    "TextInput1": 21,
+    "TextInput2": 19,
+    "txtComment": 15,
+    "txtDesc": 8,
+    "txtHTML": 6,
+    "txtNewStatus": 14,
+    "txtNumber": 5,
+    "txtOldStatus": 12,
+    "txtURL": 18,
+    "txtUser": 10
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "07/13/2022 20:48:26",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {
+    "c73408bb-a7e1-48bf-ad7b-7bc2e0f86b1b": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/f912709cea3e48ec93d55ca8a1850612\""
+  },
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OrderComponentMetadata": {},
+  "OrderComponentTemplate": {},
+  "OrderDataSource": {
+    "Office365Outlook": 0
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "button": 3,
+    "htmlViewer": 2,
+    "label": 0,
+    "text": 1
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "Button1": 18,
+    "Button2": 19,
+    "Label1": 0,
+    "Label2": 3,
+    "Label3": 5,
+    "Label4": 7,
+    "Label5": 9,
+    "Label6": 12,
+    "Label7": 13,
+    "Label8": 16,
+    "scrMain": 0,
+    "TextInput1": 17,
+    "TextInput2": 15,
+    "txtComment": 11,
+    "txtDesc": 4,
+    "txtHTML": 2,
+    "txtNewStatus": 10,
+    "txtNumber": 1,
+    "txtOldStatus": 8,
+    "txtURL": 14,
+    "txtUser": 6
+  },
+  "ResourcesJsonIndices": {},
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.1913025,
+    "ControlCount": {
+      "button": 2,
+      "htmlViewer": 1,
+      "label": 8,
+      "screen": 1,
+      "text": 9
+    },
+    "DeserializationLoadTime": 0.6743995,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": true
+}

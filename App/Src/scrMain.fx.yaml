@@ -1,0 +1,226 @@
+scrMain As screen:
+    OnVisible: |-
+        =Set(cParam, Gray);
+        If(Not(IsBlank(Param("JobNo"))), Set(cParam, Green));
+
+    txtNumber As text:
+        Default: ="777"
+        X: =178
+        Y: =24
+        ZIndex: =7
+
+    txtDesc As text:
+        Default: ="A new job"
+        X: =178
+        Y: =72
+        ZIndex: =8
+
+    txtURL As text:
+        Default: |-
+            =$"https://apps.powerapps.com/play/fa325703-a24a-446b-861f-e26f283a20e0?tenantId=57bdcf7d-081f-450a-bd48-6ca6af1113b?JobNo={txtNumber.Text}"
+        X: =178
+        Y: =312
+        ZIndex: =10
+
+    Button1 As button:
+        Height: =45
+        OnSelect: =Office365Outlook.SendEmailV2("jpenner@hydro.mb.ca", "JobTrac Submission", txtHTML.HtmlText);
+        Text: ="Send Email"
+        Width: =1196
+        X: =90
+        Y: =610
+        ZIndex: =12
+
+    Button2 As button:
+        OnSelect: =Set(LoadJobNo, Param("JobNo"));
+        Text: ="Param Test"
+        X: =896
+        Y: =704
+        ZIndex: =15
+
+    txtUser As text:
+        Default: ="Johnny Dynamo"
+        X: =178
+        Y: =120
+        ZIndex: =17
+
+    txtOldStatus As text:
+        Default: ="Old and Busted"
+        X: =178
+        Y: =168
+        ZIndex: =18
+
+    txtNewStatus As text:
+        Default: ="New Hotness"
+        X: =178
+        Y: =216
+        ZIndex: =19
+
+    txtComment As text:
+        Default: ="I can neither confirm nor deny that Microsoft Power Platform is an acceptable product. "
+        X: =178
+        Y: =264
+        ZIndex: =20
+
+    Label1 As label:
+        Align: =Align.Right
+        Text: |-
+            ="Number:"
+        X: =28
+        Y: =24
+        ZIndex: =21
+
+    Label2 As label:
+        Align: =Align.Right
+        Text: |-
+            ="Description:"
+        X: =28
+        Y: =72
+        ZIndex: =22
+
+    Label3 As label:
+        Align: =Align.Right
+        Text: |-
+            ="User:"
+        X: =28
+        Y: =120
+        ZIndex: =23
+
+    Label4 As label:
+        Align: =Align.Right
+        Text: |-
+            ="Old Status:"
+        X: =28
+        Y: =168
+        ZIndex: =24
+
+    Label5 As label:
+        Align: =Align.Right
+        Text: |-
+            ="New Status:"
+        X: =28
+        Y: =216
+        ZIndex: =25
+
+    Label6 As label:
+        Align: =Align.Right
+        Text: |-
+            ="Comment:"
+        X: =28
+        Y: =266
+        ZIndex: =26
+
+    Label7 As label:
+        Align: =Align.Right
+        Text: |-
+            ="URL:"
+        X: =28
+        Y: =312
+        ZIndex: =27
+
+    txtHTML As htmlViewer:
+        Height: =338
+        HtmlText: |-
+            =$"<html>
+            
+                <header>
+                    <style>
+                    
+            			.group {{
+            				margin: 10;
+            				border: 2px solid DodgerBlue;
+            			}}
+            			
+            			.group-header {{
+            				padding: 5;
+            				color: White;
+            				background-color: DodgerBlue;
+            				font-weight: bold;
+            				font-size: 20px;
+            			}}
+            			
+            			.group-body {{
+            				padding: 5;
+            			}}
+            			
+            			.table-header {{
+            				text-align: right;
+            			}}
+            
+                    </style>
+                </header>
+            
+            	<body>
+            
+            		<div class='group'>
+            			<div class='group-header'>Notification</div>
+            			<div class='group-body'>JobTrac No. {txtNumber.Text} has been assigned to you for Approval or has changed status (Depending on if it is a workflow or notification)</div>
+            		</div>
+            		
+            		<div class='group'>
+            			<div class='group-header'>Request Details</div>
+            			<div class='group-body'>
+            				<table>
+            					<tr>
+            						<td class='table-header'>JobTrac ID:</td>
+            						<td>{txtNumber.Text}</td>
+            					</tr>
+            					<tr>
+            						<td class='table-header'>JobTrac Description:</td>
+            						<td>{txtDesc.Text}</td>
+            					</tr>
+            					<tr>
+            						<td class='table-header'>Requested For:</td>
+            						<td>{txtUser.Text}</td>
+            					</tr>
+            					<tr>
+            						<td class='table-header'>Current Status:</td>
+            						<td>{txtOldStatus.Text}</td>
+            					</tr>
+            					<tr>
+            						<td class='table-header'>Requested Status:</td>
+            						<td>{txtNewStatus.Text}</td>
+            					</tr>
+            				</table>
+            			</div>
+            		</div>
+            		
+            		<div class='group'>
+            			<div class='group-header'>Comments</div>
+            			<div class='group-body'>{txtComment.Text}</div>
+            		</div>
+            		
+            		<div class='group'>
+            			<div class='group-header'>JobTrac URL</div>
+            			<div class='group-body'><a href='http://mpower2.hydro.mb.ca/Pages/default.aspx'>JobTrac ID {txtNumber.Text}</a></div>
+            		</div>
+            
+            	</body>
+            
+            </html>"
+        Width: =767
+        X: =558
+        Y: =32
+        ZIndex: =28
+
+    Label8 As label:
+        Align: =Align.Right
+        Text: |-
+            ="JobNo Param:"
+        X: =199
+        Y: =488
+        ZIndex: =29
+
+    TextInput1 As text:
+        Default: =Param("JobNo")
+        X: =349
+        Y: =488
+        ZIndex: =30
+
+    TextInput2 As text:
+        BorderColor: =cParam
+        Default: =Not(IsBlank(Param("JobNo")))
+        X: =930
+        Y: =479
+        ZIndex: =31
+
